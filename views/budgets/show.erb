@@ -1,0 +1,10 @@
+<h2>Budget</h2>
+
+<p class="description"> <%= @budget.category.description %></p>
+
+<p class="total">Total For Budget: &nbsp;<%= @budget.value %></p>
+<p class="total">Remaining In Budget: &nbsp;<%= (@budget.value).to_f - (@budget.total_spent).to_f  %></p>
+
+<a href="/budgets/<%= @budget.id %>/edit">Update Budget</a>
+<br><br>
+<a href="/budgets">All Budgets</a>

@@ -1,0 +1,33 @@
+<h1>&nbsp; &nbsp;Transactions</h1>
+<link rel="stylesheet" type="text/css" href="/style.css">
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Merchant</th>
+    <th>Category</th>
+    <th>Cost</th>
+  </thead>
+
+  <% @transactions.each do |transaction| %>
+  <tr>
+    <td><%= transaction.id %></td>
+    <td><a href="/merchants/<%= transaction.merchant_id %>"><%= transaction.merchant %></td>
+    <td><%= transaction.category %></td>
+    <td><%= transaction.currency %></td>
+    <td><a href="/transactions/<%= transaction.id %>">View</a></td>
+    <td><form action="/transactions/<%= transaction.id %>" method="post">
+      <input type="hidden" name="_method" value="delete" >
+      <input type="submit" value="Delete" >
+    </form></td>
+  </tr>
+  <% end %>
+</table>
+<br>
+<p class="total"> &nbsp;Total Expenditure:</p>&nbsp;£<%= @total %><br>
+<a class="link" href="/transactions/new">Add new transaction</a><br>
+
+
+
+
+
+

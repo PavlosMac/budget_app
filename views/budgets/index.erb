@@ -1,0 +1,30 @@
+<h1>Budgets</h1>
+<link rel="stylesheet" type="text/css" href="/style.css">
+<table>
+  <thead>
+    <th class="td"></th>
+    <th>Budget Value</th>
+    <th>Spent</th>
+    <th>Remaining in Budget</th>
+  </thead>
+  <% @budgets.each do |budget| %>
+  <tr>
+    <td><%= budget.category.description %></td>
+    <td><%= budget.value %></td>
+    <td><%= budget.total_spent %></td>
+    <td><%= ((budget.value).to_f - (budget.total_spent).to_f).round(2) %></td>
+    <td>
+      <a href="/budgets/<%= budget.id %>">View</a>
+    </td>
+    <td>
+      <form action="/budgets/<%= budget.id %>" method="post">
+        <input type="hidden" name="_method" value="delete" /><br>
+        <input type="submit" value="Delete" />
+      </form>
+    </td>
+    <% end %>
+  </table>
+
+  <br><a class="link"  href="/budgets/new">Add New Budget</a>
+
+  <h2> Total budget:  <%= @budget_total %> </h2>

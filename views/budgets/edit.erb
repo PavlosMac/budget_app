@@ -1,0 +1,15 @@
+<h2>Update Budget</h2>
+
+<form action="/budgets/<%= @budget.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label class="total" for="budget">Budget:  </label><%=  @budget.category.description %><br><br>
+
+  <label class="total" for="budget">Current Value:  </label><%= @budget.value %><br><br>
+
+  <label class="total" for="currency">New value</label>
+    <span class="currencyinput">£<input type="number" min="0" step="0.01" name="currency"></span>
+      <input type='submit' value="Update Budget">
+</form>
+
+  <br><a href="/budgets/<%= @budget.id %>" >Back</a>

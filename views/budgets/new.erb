@@ -1,0 +1,17 @@
+<h2>Add Budget</h2>
+
+<form action="/budgets" method="post">
+  <label class="description" for="category_id">Category:</label>
+  <select name="category_id" id="category_id">
+    <% for category in @categories %>
+    <option class="select" value="<%= category.id %>"><%= category.description  %>&nbsp;</option>
+    <% end %>
+
+    <label class="description" for="value">Amount:</label>
+    <span style="height:33px; font-size: 14pt;" class="currencyinput">£<input type="number" min="0" step="0.01" name="value"></span>
+    <input type='submit' value="Submit Budget">
+  </form>
+
+  <br>
+
+  <a href="/">Back</a>

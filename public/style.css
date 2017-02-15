@@ -1,0 +1,111 @@
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+h1 {
+    font-family: Impact;
+}
+
+h2 {
+    font-family: Impact;
+    font-size: 15px;
+}
+
+.total {
+    font-family: serif;
+    font-size: 20px;
+
+}
+
+.link{
+    font-size: 20px;
+    font-color: #ff0000;
+}
+
+.logo {
+    color: black;
+    font-family: Century Gothic;
+    font-size: 35px;
+    float: right;
+}
+
+.td {
+    text-align: middle;
+
+}
+
+.select {
+
+    height: 50px;
+}
+
+table, th, td {
+    border: 5px double;
+    border-color: #990000;
+    border-collapse: collapse;
+    font-family: verdana;
+    width: 45%;
+    height: 40px;
+    text-align: centre;
+}
+
+.currencyinput {
+    border: 2px inset #ccc;
+}
+.currencyinput input {
+    border: 5px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  font-family: Helvetica;
+
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #000080;
+  color: white;
+  margin: 0 10px;
+  padding: 5px 15px;
+}
+
+nav a:hover {
+  background-color: #80002a;
+}
+
+
+
+.description{
+
+    font-family: helvetica;
+    font-size: 20px;
+}
+
+.info{
+    font-family: helvetica;
+    font-size: 15px;
+}
+
+.go_left{
+    float: left;
+}
+
+body {
+    background-image: url('http://thefrugalentrepreneur01.s3-us-west-2.amazonaws.com/wp-content/uploads/2010/10/23095038/frugal-entrepreneur.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+</style>
